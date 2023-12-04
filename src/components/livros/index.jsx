@@ -12,7 +12,7 @@ export default function Livros() {
   const renderLivros = (testament) => (
     <div className='border p-4 m-2 flex justify-center flex-col'>
       <h3 className="text-xl font-bold mb-4">{testament}</h3>
-      <ul className='grid grid-cols-3 gap-2'>
+      <ul className='grid grid-cols-3 gap-3 text-sm md:text-lg'>
         {livros
           .filter((livro) => livro.periodo.includes(testament))
           .map((livro) => (
