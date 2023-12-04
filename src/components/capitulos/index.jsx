@@ -13,7 +13,7 @@ export default function Capitulos(props) {
     >
       {props.Biblia.map((a, b) => (
         <option
-        className="bg-slate-800 text-white font-bold py-2 px-4 rounded"
+          className="bg-slate-800 text-white font-bold py-2 px-4 rounded"
           key={b}
           value={b}>
           {a.nome}
@@ -22,14 +22,17 @@ export default function Capitulos(props) {
     </select>
   );
 
-  const btnCap = () => (
-    <>
+  const SelectCap = () => (
+    <select
+      className="bg-slate-800 text-white font-bold py-2 px-4 rounded"
+      onChange={(e) => props.setCap(parseInt(e.target.value, 10))}
+    >
       {props.Biblia[props.livro].capitulos.map((a, b) => (
-        props.Biblia[props.livro].capitulos.length > 1 && <button className="bg-slate-800 text-white font-bold py-2 px-4 rounded " key={b} onClick={() => props.setCap(b)}>
+        <option key={b} value={b}>
           {b + 1}
-        </button>
+        </option>
       ))}
-    </>
+    </select>
   );
 
   const btnCap1 = () => (
@@ -45,7 +48,7 @@ export default function Capitulos(props) {
       >
         Anterior
       </button>
-      
+
       <button
         className="bg-slate-800 text-white font-bold py-2 px-4 rounded"
         onClick={() => {
@@ -59,16 +62,20 @@ export default function Capitulos(props) {
       </button>
     </>
   );
-  
+
 
 
   return (
     <div className="gap-3 flex flex-col items-center">
-      <div className="flex mt-2">
-        {selectLivros()}
-      </div>
-      <div className="gap-2 flex flex-wrap text-center justify-center p-3">
-        {btnCap()}
+      <div className="flex flex-row gap-5 text-center items-center">
+        <div className="flex flex-col text-center">
+          <p>Livro</p>
+          {selectLivros()}
+        </div>
+        <div className=" flex flex-col text-center">
+          <p>Capitulos</p>
+          {SelectCap()}
+        </div>
       </div>
       <div className="gap-2 flex flex-wrap text-center justify-center p-3">
         {btnCap1()}
