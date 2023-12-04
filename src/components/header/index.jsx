@@ -7,10 +7,10 @@ export default function Header() {
             <a href="/">Página Inicial</a>
           </li>
           <li>
-            <a href="/livros">Biblia</a>
+            <a href="/biblia">Biblia</a>
           </li>
           <li>
-            <a href="#">Contato</a>
+            <a href="https://www.instagram.com/nerigleston">Contato</a>
           </li>
         </ul>
       </nav>

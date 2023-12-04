@@ -14,7 +14,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/livros" element={<Biblias />} />
+        <Route path="/biblia" element={<Biblias />} />
         <Route path="/livro/:id" element={<Livro />} />
       </Routes>
     </BrowserRouter>
