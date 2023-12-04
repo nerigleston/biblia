@@ -17,7 +17,7 @@ root.render(
         <Route exact path="/" element={<Home />} />
         <Route exact path="/biblia" element={<Biblias />} />
         <Route exact path="/livro/:id" element={<Livro />} />
-        <Route path="*" component={<Erro404 />} />
+        <Route path="*" element={<Erro404 />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
