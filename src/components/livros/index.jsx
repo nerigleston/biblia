@@ -16,10 +16,10 @@ export default function Livros() {
         {livros
           .filter((livro) => livro.periodo.includes(testament))
           .map((livro) => (
-            <li key={livro.id} className='mb-2'>
+            <li key={livro.id} className='mb-2 text-center'>
               <Link
                 to={`/livro/${livro.id}`}
-                className='p-3 cursor-pointer bg-gray-200 block'
+                className='py-3 cursor-pointer bg-gray-200 block'
               >
                 {livro.nome}
               </Link>
