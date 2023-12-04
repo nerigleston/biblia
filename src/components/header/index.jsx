@@ -10,7 +10,7 @@ export default function Header() {
             <a href="/biblia">Biblia</a>
           </li>
           <li>
-            <a href="https://www.instagram.com/nerigleston">Contato</a>
+            <a href="/contato">Contato</a>
           </li>
         </ul>
       </nav>
