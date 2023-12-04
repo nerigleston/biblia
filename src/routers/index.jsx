@@ -5,6 +5,7 @@ import Home from '.././pages/home';
 import '../index.css';
 import Livro from '.././components/livroDetalhe';
 import Biblias from '../components/biblia';
+import Erro404 from '../components/notFound';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -14,8 +15,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/biblia" element={<Biblias />} />
-        <Route path="/livro/:id" element={<Livro />} />
+        <Route exact path="/biblia" element={<Biblias />} />
+        <Route exact path="/livro/:id" element={<Livro />} />
+        <Route path="*" component={<Erro404 />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
