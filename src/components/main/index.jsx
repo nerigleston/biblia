@@ -9,7 +9,7 @@ export default function Main(props) {
   }
 
   return (
-    <div>
+    <div className="">
       <h1 className="font-bold flex justify-center p-2">{props.Biblia[props.livro].nome} {props.cap + 1}</h1>
       <p className="p-5 gap-2 flex flex-col">{contCap()}</p>
 </div>

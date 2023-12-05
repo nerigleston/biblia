@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '.././pages/home';
 import '../index.css';
@@ -9,7 +9,7 @@ import Erro404 from '../pages/notFound';
 import Contatos from '../pages/contatos';
 
 const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
+const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <StrictMode>

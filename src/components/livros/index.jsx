@@ -10,16 +10,16 @@ export default function Livros() {
   }, []);
 
   const renderLivros = (testament) => (
-    <div className='border p-4 m-2 flex justify-center flex-col'>
-      <h3 className="text-xl font-bold mb-4">{testament}</h3>
-      <ul className='grid grid-cols-3 gap-3 text-sm md:text-lg'>
+    <div className='border p-4 4K:p-10 m- flex justify-center flex-col'>
+      <h3 className="font-bold mb-4 4K:mb-8">{testament}</h3>
+      <ul className='grid grid-cols-3 gap-3 4K:gap-5'>
         {livros
           .filter((livro) => livro.periodo.includes(testament))
           .map((livro) => (
             <li key={livro.id} className='mb-2 text-center'>
               <Link
                 to={`/livro/${livro.id}`}
-                className='py-3 cursor-pointer bg-gray-200 block'
+                className='py-3 4K:py-10 cursor-pointer bg-gray-200 block'
               >
                 {livro.nome}
               </Link>
